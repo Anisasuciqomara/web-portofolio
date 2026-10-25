@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #000;
+  color: #fff;
+}
+
+section {
+  scroll-margin-top: 8rem;
+}
+
+/* ---------- Header ---------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: 0.4s ease;
+}
+
+header.sticky {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #b74b4b;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-left: 4rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+/* ---------- Home ---------- */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  padding: 10rem 9% 2rem;
+}
+
+.home-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.home-img img {
+  width: 100%;
+  max-width: 50rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.home-content {
+  flex: 1;
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-content h1 span,
+.typing-text {
+  color: #b74b4b;
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  min-height: 4.5rem;
+}
+
+.home-content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin: 2rem 0 3rem;
+  color: #ddd;
+}
+
+.home-social {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.home-social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 2px solid #b74b4b;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #b74b4b;
+  transition: 0.4s ease;
+}
+
+.home-social a:hover {
+  background: #b74b4b;
+  color: #000;
+  box-shadow: 0 0 1.5rem #b74b4b;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 3.2rem;
+  background: #b74b4b;
+  color: #000;
+  font-size: 1.7rem;
+  font-weight: 600;
+  border-radius: 4rem;
+  border: 2px solid #b74b4b;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #b74b4b;
+  box-shadow: 0 0 1.5rem #b74b4b;
+}
+
+/* ---------- Umum untuk section ---------- */
+.about,
+.services,
+.skills,
+.projects,
+.contact {
+  padding: 8rem 9%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+
+.heading span {
+  color: #b74b4b;
+}
+
+/* ---------- About ---------- */
+.about-wrap {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.about-text {
+  font-size: 1.7rem;
+  line-height: 1.9;
+  color: #ddd;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.timeline {
+  border-left: 3px solid #b74b4b;
+  padding-left: 3rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -3.9rem;
+  top: 0.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: #b74b4b;
+  border-radius: 50%;
+}
+
+.timeline-item .year {
+  font-size: 1.4rem;
+  color: #b74b4b;
+  font-weight: 600;
+}
+
+.timeline-item h4 {
+  font-size: 2rem;
+  margin: 0.4rem 0;
+}
+
+.timeline-item p {
+  font-size: 1.5rem;
+  color: #bbb;
+}
+
+/* ---------- Services ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background: #161616;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  border-color: #b74b4b;
+  transform: translateY(-1rem);
+}
+
+.card i {
+  font-size: 5rem;
+  color: #b74b4b;
+  margin-bottom: 2rem;
+}
+
+.card h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #bbb;
+}
+
+/* ---------- Skills ---------- */
+.skills-wrap {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 2.5rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.bar {
+  height: 1rem;
+  background: #222;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: #b74b4b;
+  border-radius: 1rem;
+}
+
+/* ---------- Projects ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 3rem;
+}
+
+.project {
+  background: #161616;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: 0.4s ease;
+}
+
+.project:hover {
+  border-color: #b74b4b;
+  transform: translateY(-1rem);
+}
+
+.project-thumb {
+  height: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2a0f0f, #b74b4b);
+}
+
+.project-thumb i {
+  font-size: 6rem;
+  color: #fff;
+}
+
+.project-body {
+  padding: 2.5rem;
+}
+
+.project-body h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.project-body p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #bbb;
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #b74b4b;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Contact ---------- */
+.contact-form {
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: #161616;
+  border: 2px solid #333;
+  border-radius: 1rem;
+  resize: none;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #b74b4b;
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 9%;
+  background: #0b0b0b;
+}
+
+footer p {
+  font-size: 1.5rem;
+  color: #bbb;
+}
+
+.to-top {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  background: #b74b4b;
+  color: #000;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.to-top:hover {
+  box-shadow: 0 0 1.5rem #b74b4b;
+}
+
+/* ---------- Animasi muncul saat scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(4rem);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 995px) {
+  header {
+    padding: 2rem 4%;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 40%;
+    padding: 1rem 0;
+    background: #161616;
+    border-left: 3px solid #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    border-bottom-left-radius: 2rem;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1.5rem 2rem;
+    border-radius: 0 0 0.8rem 0.8rem;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    padding: 12rem 4% 3rem;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.4rem;
+  }
+
+  .home-social {
+    justify-content: center;
+  }
+
+  .home-img img {
+    max-width: 32rem;
+  }
+
+  .about,
+  .services,
+  .skills,
+  .projects,
+  .contact {
+    padding: 6rem 4%;
+  }
+
+  .heading {
+    font-size: 3.4rem;
+  }
+
+  footer {
+    padding: 2.5rem 4%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    width: 60%;
+  }
+}
